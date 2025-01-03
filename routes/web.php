@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\BackendDashboardController;
 use App\Http\Controllers\frontend\AboutController;
 use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\frontend\CoursesController;
@@ -54,4 +55,9 @@ Route::controller(GetStartController::class)->group(function(){
     Route::get('/frontend/get-start', 'index');
 });
 
+
+/* BACKEND */
+Route::controller(BackendDashboardController::class)->group(function(){
+    Route::get('/dashboard', 'index');
+});
 
